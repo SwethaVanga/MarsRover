@@ -4,6 +4,9 @@ module.exports = {
 				"es2021": true,
 				"jest": true
     },
+		"globals": {
+			"shallow": true
+  	},
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"

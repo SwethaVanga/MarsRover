@@ -7,7 +7,7 @@ const WRONG_POSITION_INSTRCUTION = "100 200 A|LMLMLMLMM"
 describe("Parse instructions", () => {
 	test("Parse instruction generate and object with movements and position", () =>{
 		expect(parseInstructions(EXAMPLE_INSTRCUTION)).toMatchObject({
-			position: ["1", "2", "N"], 
+			position: [1, 2, "N"], 
 			commands: [
 				'L', 'M', 'L',
 				'M', 'L', 'M',
