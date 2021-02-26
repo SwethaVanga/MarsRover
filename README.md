@@ -22,6 +22,8 @@ Movements File (For Reference)
 1 2 N|LMLMLMLMM
 3 3 E|MMRMMRMRRM
 
+## Technical
+The project moves the initial rover when. It has option to load CSV and move all the rovers sequentially until finished.
 
 # Getting Started with Create React App
 
