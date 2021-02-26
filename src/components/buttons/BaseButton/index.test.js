@@ -1,17 +1,13 @@
 import React from "react";
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import renderer from "react-test-renderer";
 import ButtonBase from "./index";
+
+configure({ adapter: new Adapter() })
 
 test("Should render button component with props", () => {
     const component = renderer.create(<ButtonBase clickAction={()=> {}} title={"Run"} />);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-});
-
-test("Test click event", () => {
-    const mockCallBack = jest.fn();
-    const button = shallow(<ButtonBase clickAction={mockCallBack} title={"Hide"} />);
-    button.find("button").simulate("click");
-    expect(mockCallBack.mock.calls.length).toEqual(1);
 });
