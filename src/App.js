@@ -53,12 +53,6 @@ function App() {
     const fetchFile = async () => {
         if (file) {
             setIsFile(true);
-            // const row = file.length > csvRow ? csvRow : file.length - 1; // Avoid reading row that is outside of file
-            // const instructions = parseInstructions(file[row].toString().replace(",", "|"));
-            // setPosition(instructions.position);
-            // setCommands(instructions.commands);
-            // realCommands.current = instructions.commands;
-
             /**
              * Change code if you want to loop movie rovers
              */
